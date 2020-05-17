@@ -1,22 +1,26 @@
 #include <string>
 #include <vector>
 #include <stdexcept>
+#include "Soldier.hpp"
+#include "FootSoldier.hpp"
+#include "FootCommander.hpp"
+
 
 namespace WarGame {
 class Board
 {
  private:
-    std::vector<std::vector<void*>> board;
+    std::vector<std::vector<Soldier*>> board;
  public:
     enum MoveDIR { Up, Down, Right, Left };
     
-    Board(uint numRows, uint numCols) : board(numRows, std::vector<void*>(numCols, nullptr)){};
+    Board(uint numRows, uint numCols) : board(numRows, std::vector<Soldier*>(numCols, nullptr)){};
 
     // operator for putting soldiers on the game-board during initialization.
-    void*& operator[](std::pair<int,int> location);
+    Soldier*& operator[](std::pair<int,int> location);
     
     // operator for reading which soldiers are on the game-board.
-    void* operator[](std::pair<int,int> location) const;
+    Soldier* operator[](std::pair<int,int> location) const;
     
     
     // Try to move the soldier of player "player"
