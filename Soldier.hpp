@@ -1,6 +1,6 @@
 #pragma once
 
-namespace wargame {
+namespace WarGame {
 	class Soldier {
 		// You have to write this class 
 	};
