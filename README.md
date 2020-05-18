@@ -22,6 +22,15 @@
 * Paramedic - חובש - יכול ללכת משבצת אחת לכל כיוון. לא יורה בכלל, אלא רק מרפא את כל החיילים של אותו שחקן שנמצאים במשבצת לידו (מחזיר את מספר נקודות-הבריאות שלהם למספר ההתחלתי).
 * ParamedicCommander - כמו חובש, אבל כשהוא זז, כל החובשים של אותו שחקן מרפאים את החיילים שנמצאים לידם.
 
+## תכונות החיילים
+
+FootSoldier: initial health points=100, damage per activity=10.
+FootCommander: initial health points=150, damage per activity=20.
+Sniper: initial health points=100, damage per activity=50.
+SniperCommander: initial health points=120, damage per activity=100.
+Paramedic: initial health points=100, health per activity=50.
+ParamedicCommander: initial health points=200, health per activity=100.
+
 ## מחלקות
 
 בנוסף למחלקות המייצגות את סוגי החיילים השונים, אתם צריכים לממש את המחלקה 
