@@ -17,12 +17,12 @@ namespace WarGame {
 	 public:
 
  		/**
-		 *  Game Constructor will initilize board and place soldiers.
+		 * The constructor initilizes the board and places the soldiers.
 		 */
 		DemoGame();
 		
 		/**
-		 *  Play the game and return the winner (1 or 2).
+		 * This function runs a sample play oof the game and returns the winner (1 or 2, or 0 in case of tie).
 		 */
 		uint play(); 
 	};
