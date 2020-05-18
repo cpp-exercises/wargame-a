@@ -22,7 +22,8 @@ class Board {
   public:
     enum MoveDIR { Up, Down, Right, Left };
     
-    Board(uint numRows, uint numCols) : board(numRows, std::vector<Soldier*>(numCols, nullptr)){};
+    Board(uint numRows, uint numCols) : 
+      board(numRows, std::vector<Soldier*>(numCols, nullptr)) {}
 
     // operator for putting soldiers on the game-board during initialization.
     Soldier*& operator[](std::pair<int,int> location);
@@ -30,20 +31,20 @@ class Board {
     // operator for reading which soldiers are on the game-board.
     Soldier* operator[](std::pair<int,int> location) const;
     
-    
-    // Try to move the soldier of player "player"
+    // The function "move" tries to move the soldier of player "player"
     //     from the "source" location to the "target" location.
     // If the move is illegal, it throws "std::invalid_argument". 
     // Illegal moves include:
     //  * There is no soldier in the source location (i.e., the soldier pointer is null);
     //  * The soldier in the source location belongs to the other player.
     //  * There is already another soldier (of this or the other player) in the target location.
-    std::pair<int,int> move(int player_number, std::pair<int,int> source, MoveDIR direction);
-    // You have to implement this function.
-    // HINT: Do not write code that depends on the type of soldier!
+    // IMPLEMENTATION HINT: Do not write "if" conditions that depend on the type of soldier!
     // Your code should be generic. All handling of different types of soldiers 
     //      must be handled by polymorphism.
-    //throw new std::invalid_argument{};
+    std::pair<int,int> move(uint player_number, std::pair<int,int> source, MoveDIR direction);
+
+    // returns true iff the board contains one or more soldiers of the given player.
+    bool has_soldiers() const (uint player_number);
 };
 
 }
