@@ -32,7 +32,8 @@ class Board {
     Soldier* operator[](std::pair<int,int> location) const;
     
     // The function "move" tries to move the soldier of player "player"
-    //     from the "source" location to the "target" location.
+    //     from the "source" location to the "target" location,
+    //     and activates the special ability of the soldier.
     // If the move is illegal, it throws "std::invalid_argument". 
     // Illegal moves include:
     //  * There is no soldier in the source location (i.e., the soldier pointer is null);
@@ -41,10 +42,10 @@ class Board {
     // IMPLEMENTATION HINT: Do not write "if" conditions that depend on the type of soldier!
     // Your code should be generic. All handling of different types of soldiers 
     //      must be handled by polymorphism.
-    std::pair<int,int> move(uint player_number, std::pair<int,int> source, MoveDIR direction);
+    void move(uint player_number, std::pair<int,int> source, MoveDIR direction);
 
     // returns true iff the board contains one or more soldiers of the given player.
-    bool has_soldiers() const (uint player_number);
+    bool has_soldiers(uint player_number) const;
 };
 
 }
