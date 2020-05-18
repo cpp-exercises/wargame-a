@@ -9,6 +9,10 @@
 #include <string>
 #include <vector>
 #include <stdexcept>
+#include "Soldier.hpp"
+#include "FootSoldier.hpp"
+#include "FootCommander.hpp"
+
 
 namespace WarGame {
 
@@ -22,10 +26,11 @@ class Board {
 
     // operator for putting soldiers on the game-board during initialization.
     Soldier*& operator[](std::pair<int,int> location);
-
+    
     // operator for reading which soldiers are on the game-board.
     Soldier* operator[](std::pair<int,int> location) const;
-
+    
+    
     // Try to move the soldier of player "player"
     //     from the "source" location to the "target" location.
     // If the move is illegal, it throws "std::invalid_argument". 
