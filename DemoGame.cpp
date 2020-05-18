@@ -8,6 +8,9 @@
  */
 
 #include "DemoGame.hpp"
+#include "FootSoldier.hpp"
+#include "FootCommander.hpp"
+
 #include <cassert>
 
 namespace WarGame {

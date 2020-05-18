@@ -10,8 +10,6 @@
 #include <vector>
 #include <stdexcept>
 #include "Soldier.hpp"
-#include "FootSoldier.hpp"
-#include "FootCommander.hpp"
 
 
 namespace WarGame {

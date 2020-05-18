@@ -22,7 +22,7 @@ namespace WarGame {
 		DemoGame();
 		
 		/**
-		 * This function runs a sample play oof the game and returns the winner (1 or 2, or 0 in case of tie).
+		 * This function runs a sample play of the game and returns the winner (1 or 2, or 0 in case of tie).
 		 */
 		uint play(); 
 	};
