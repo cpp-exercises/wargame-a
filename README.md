@@ -28,8 +28,8 @@
 * FootCommander: initial health points=150, damage per activity=20.
 * Sniper: initial health points=100, damage per activity=50.
 * SniperCommander: initial health points=120, damage per activity=100.
-* Paramedic: initial health points=100, health per activity=50.
-* ParamedicCommander: initial health points=200, health per activity=100.
+* Paramedic: initial health points=100, health per activity=full.
+* ParamedicCommander: initial health points=200, health per activity=full.
 
 ## מחלקות
 
