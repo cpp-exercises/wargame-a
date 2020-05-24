@@ -52,13 +52,14 @@ namespace WarGame {
 			return 0;
 		}
 
-		// DemoGame::~DemoGame() {
-		// 	for (auto row: board) {
-		// 		for (auto soldier: row) {
-		// 			if (soldier)
-		// 				delete soldier;
-		// 		}
-		// 	}
-		// }
+		 DemoGame::~DemoGame() {
+		 	for (auto row: board) {
+		 		for (auto soldier: row) {
+		 			if (soldier)
+		 				delete soldier;
+		 		}
+		 	}
+			 delete board;
+		 }
 
 }
