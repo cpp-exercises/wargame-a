@@ -15,8 +15,8 @@
 
 namespace WarGame {
 
-		DemoGame::DemoGame(): board (8, 8) {
-			// Add soldiers for player 1:
+		DemoGame::DemoGame(): board (numRows, numCols) {
+		// Add soldiers for player 1:
 			//assert(!board.has_soldiers(1));
 			board[{0,1}] = new FootSoldier(1);
 			board[{0,3}] = new FootCommander(1);
@@ -52,13 +52,14 @@ namespace WarGame {
 			return 0;
 		}
 
-		 DemoGame::~DemoGame() {
-			 for (auto row: board) {
-		 		for (auto soldier: row) {
-		 			if (soldier)
-		 				delete soldier;
-		 		}
-		 	}
-		 }
+		DemoGame::~DemoGame() {
+			for (int iRow=0; iRow<numRows; ++iRow) {
+				for (int iCol=0; iCol<numCols; ++iCol) {
+					Soldier* soldier = board[{iRow,iCol}];
+					if (soldier)
+						delete soldier;
+				}
+			}
+		}
 
 }
