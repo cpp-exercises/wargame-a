@@ -49,12 +49,6 @@ class Board {
     
     ~Board()
     {
-      for (auto row: board) {
-		 		for (auto soldier: row) {
-		 			if (soldier)
-		 				delete soldier;
-		 		}
-		 	}
       board.clear();
     }
 };
