@@ -53,7 +53,12 @@ namespace WarGame {
 		}
 
 		 DemoGame::~DemoGame() {
-			 delete board;
+			 for (auto row: board) {
+		 		for (auto soldier: row) {
+		 			if (soldier)
+		 				delete soldier;
+		 		}
+		 	}
 		 }
 
 }
